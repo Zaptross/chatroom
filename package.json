@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "install": "yarn install:be && yarn install:fe",
+    "install:be": "yarn --cwd ./backend install",
+    "install:fe": "yarn --cwd ./frontend install",
+    "build": "yarn build:be && yarn build:fe",
+    "build:be": "yarn --cwd ./backend build",
+    "build:fe": "yarn --cwd ./frontend build",
+    "clean": "yarn clean:be && yarn clean:fe",
+    "clean:be": "yarn --cwd ./backend clean",
+    "clean:fe": "yarn --cwd ./frontend clean"
+  }
+}
