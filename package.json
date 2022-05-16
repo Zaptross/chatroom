@@ -1,13 +1,18 @@
 {
   "scripts": {
-    "install": "yarn install:be && yarn install:fe",
+    "install": "yarn install:be && yarn install:contracts && yarn install:fe",
     "install:be": "yarn --cwd ./backend install",
+    "install:contracts": "yarn --cwd ./contracts install",
     "install:fe": "yarn --cwd ./frontend install",
-    "build": "yarn build:be && yarn build:fe",
+    "start:be": "yarn --cwd ./backend start:dev",
+    "start:fe": "yarn --cwd ./frontend start",
+    "build": "yarn install:contracts && yarn build:be && yarn build:fe",
     "build:be": "yarn --cwd ./backend build",
+    "build:contracts": "yarn --cwd ./contracts build",
     "build:fe": "yarn --cwd ./frontend build",
-    "clean": "yarn clean:be && yarn clean:fe",
+    "clean": "yarn clean:be && yarn clean:contracts && yarn clean:fe",
     "clean:be": "yarn --cwd ./backend clean",
+    "clean:contracts": "yarn --cwd ./contracts clean",
     "clean:fe": "yarn --cwd ./frontend clean"
   }
 }
